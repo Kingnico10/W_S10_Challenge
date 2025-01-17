@@ -6,7 +6,7 @@ import { updateFilter } from '../state/filtersSlice'
 export default function OrderList() {
   const dispatch = useDispatch()
   const orders = useGetPizzaHistoryQuery().data || [];
-  const currentFilter = useSelector((state)=> state.filter.size)
+  const currentFilter = useSelector((state)=> state.filters.size)
 
   
   return (

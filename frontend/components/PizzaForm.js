@@ -25,10 +25,8 @@ const reducer = (state, action) => {
 } 
 
 export default function PizzaForm() {
- const [form, dispatch] = useReducer(reducer, 
-  initialFormState);
- const [createOrder, {isloading, error}] = 
- useCreateOrderMutation();
+ const [form, dispatch] = useReducer(reducer, initialFormState);
+ const [createOrder, {isloading, error}] = useCreateOrderMutation();
 
  const onChange = (evt) => {
   let { name, value, type, checked } = evt.target
@@ -47,7 +45,7 @@ export default function PizzaForm() {
  createOrder(requestBody)
    .unwrap()
    .then(() => {
-    dispatch({ type: "REGET_FORM" })
+    dispatch({ type: "RESET_FORM" })
    })
    .catch(() => {})
  }

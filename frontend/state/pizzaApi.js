@@ -9,7 +9,7 @@ export const pizzaApi = createApi({
             query: () => "/pizza/history",
             providesTags: ["Orders"],
         }),
-        createOrders: builder.mutation({
+        createOrder: builder.mutation({
             query: (body) => ({
                 url: "/pizza/order",
                 method: "POST",
